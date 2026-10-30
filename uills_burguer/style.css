@@ -1,0 +1,1375 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+:root {
+    --yellow: #ffb51b;
+    --yellow2: #ffd166;
+    --black: #101010;
+    --panel: #191919;
+    --muted: #aaa;
+    --white: #f7f4ed
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+    font-family: Montserrat, Arial, sans-serif;
+    overflow-x: hidden
+}
+
+body.modal-open {
+    overflow: hidden
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+button {
+    font: inherit
+}
+
+.topline {
+    background: var(--yellow);
+    color: #111;
+    text-align: center;
+    padding: 9px 12px;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1.5px
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: #101010ed;
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid #ffffff12
+}
+
+.navbar {
+    height: 82px;
+    max-width: 1240px;
+    padding: 0 28px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 9px
+}
+
+.brand-icon {
+    width: 43px;
+    height: 43px;
+    background: var(--yellow);
+    color: #111;
+    display: grid;
+    place-items: center;
+    font: 900 34px "Barlow Condensed";
+    transform: skew(-7deg)
+}
+
+.brand-icon span {
+    color: #fff
+}
+
+.brand-name {
+    font: 900 19px "Barlow Condensed";
+    letter-spacing: 1px;
+    line-height: .85
+}
+
+.brand-name small {
+    display: block;
+    color: var(--yellow);
+    font: 700 10px Montserrat;
+    letter-spacing: 3px;
+    margin-top: 6px
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px
+}
+
+.nav-links a {
+    font-size: 11px;
+    font-weight: 800;
+    color: #bbb;
+    transition: .2s
+}
+
+.nav-links a:hover {
+    color: var(--yellow)
+}
+
+.cart-button {
+    border: 1px solid #ffffff35;
+    background: transparent;
+    color: #fff;
+    padding: 11px 15px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer
+}
+
+.cart-count {
+    background: var(--yellow);
+    color: #111;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    display: grid;
+    place-items: center
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: 0;
+    color: white;
+    font-size: 26px;
+    cursor: pointer
+}
+
+.hero {
+    max-width: 1240px;
+    margin: auto;
+    min-height: 590px;
+    padding: 75px 28px 85px;
+    display: grid;
+    grid-template-columns: 1fr 1.05fr;
+    align-items: center;
+    gap: 35px
+}
+
+.eyebrow {
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: var(--yellow);
+    display: inline-flex;
+    align-items: center;
+    gap: 9px
+}
+
+.eyebrow i {
+    width: 20px;
+    height: 2px;
+    background: var(--yellow);
+    display: inline-block
+}
+
+.hero h1,
+.section-heading h2,
+.about-copy h2,
+.location-info h2,
+.instagram-strip h2 {
+    font: 900 clamp(58px, 7vw, 94px)/.88 "Barlow Condensed";
+    letter-spacing: -1px;
+    margin: 25px 0
+}
+
+.hero h1 span,
+.section-heading h2 span,
+.about-copy h2 span,
+.location-info h2 span,
+.instagram-strip h2 span {
+    color: var(--yellow)
+}
+
+.hero-copy>p {
+    max-width: 440px;
+    color: #aaa;
+    font-size: 13px;
+    line-height: 1.9
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-top: 30px;
+    flex-wrap: wrap
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 16px 21px;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: .7px;
+    border: 0;
+    cursor: pointer;
+    transition: transform .2s, background .2s
+}
+
+.btn:hover {
+    transform: translateY(-3px)
+}
+
+.btn-yellow {
+    background: var(--yellow);
+    color: #111
+}
+
+.btn-yellow:hover {
+    background: var(--yellow2)
+}
+
+.btn-dark {
+    background: #111;
+    color: var(--yellow)
+}
+
+.text-link {
+    font-size: 11px;
+    font-weight: 800;
+    color: #ddd
+}
+
+.text-link span {
+    color: var(--yellow);
+    font-size: 18px;
+    margin-left: 6px
+}
+
+.hero-note {
+    margin-top: 42px;
+    color: #888;
+    font-size: 11px;
+    display: flex;
+    gap: 9px;
+    align-items: center
+}
+
+.hero-art {
+    height: 420px;
+    position: relative;
+    display: grid;
+    place-items: center
+}
+
+.hero-circle {
+    position: absolute;
+    width: min(34vw, 390px);
+    height: min(34vw, 390px);
+    border-radius: 50%;
+    background: var(--yellow);
+    filter: drop-shadow(0 0 70px #ffb51b24)
+}
+
+.hero-burger {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    max-height: 420px;
+    object-fit: contain;
+    mix-blend-mode: normal;
+    border-radius: 48%;
+    mask-image: radial-gradient(ellipse, #000 54%, transparent 73%);
+    filter: drop-shadow(0 22px 25px #0009);
+    animation: float 4s ease-in-out infinite
+}
+
+.hero-stamp {
+    position: absolute;
+    z-index: 3;
+    top: 20px;
+    left: 0;
+    background: #171717;
+    border: 2px solid var(--yellow);
+    color: var(--yellow);
+    padding: 13px 16px;
+    font: 800 15px/1.05 "Barlow Condensed";
+    transform: rotate(-10deg)
+}
+
+.hero-stamp b {
+    color: white
+}
+
+.hero-caption {
+    position: absolute;
+    z-index: 4;
+    right: 0;
+    bottom: 15px;
+    background: #1c1c1c;
+    padding: 15px 19px;
+    border-left: 3px solid var(--yellow);
+    display: flex;
+    gap: 12px;
+    align-items: center
+}
+
+.hero-caption span {
+    font: 900 28px "Barlow Condensed";
+    color: var(--yellow)
+}
+
+.hero-caption small {
+    font-size: 8px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    font-weight: 800
+}
+
+.ticker {
+    background: var(--yellow);
+    color: #111;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 15px 0;
+    font: 900 15px "Barlow Condensed";
+    letter-spacing: 2px
+}
+
+.ticker div {
+    width: max-content;
+    animation: marquee 24s linear infinite
+}
+
+.ticker b {
+    padding: 0 25px
+}
+
+.section {
+    max-width: 1240px;
+    margin: auto;
+    padding: 100px 28px
+}
+
+.section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 20px
+}
+
+.section-heading h2 {
+    font-size: 64px;
+    margin: 17px 0 0
+}
+
+.section-heading>p {
+    font-size: 11px;
+    line-height: 1.9;
+    color: #999;
+    padding-bottom: 5px
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 38px 0 28px
+}
+
+.filter {
+    background: #1b1b1b;
+    color: #aaa;
+    border: 1px solid #333;
+    padding: 11px 17px;
+    border-radius: 30px;
+    font-size: 10px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: .2s
+}
+
+.filter.active,
+.filter:hover {
+    background: var(--yellow);
+    color: #111;
+    border-color: var(--yellow)
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px
+}
+
+.product-card {
+    background: var(--panel);
+    border: 1px solid #ffffff12;
+    overflow: hidden;
+    transition: transform .25s, border-color .25s;
+    animation: cardIn .45s both
+}
+
+.product-card:hover {
+    transform: translateY(-7px);
+    border-color: #ffb51b80
+}
+
+.product-photo {
+    height: 215px;
+    position: relative;
+    overflow: hidden;
+    background: #252525
+}
+
+.product-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s
+}
+
+.product-card:hover .product-photo img {
+    transform: scale(1.06)
+}
+
+.product-label {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    background: var(--yellow);
+    color: #111;
+    padding: 7px 10px;
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: 1px
+}
+
+.product-info {
+    padding: 20px
+}
+
+.product-info h3 {
+    font: 800 27px "Barlow Condensed";
+    margin-bottom: 8px
+}
+
+.product-info p {
+    font-size: 11px;
+    line-height: 1.7;
+    color: #999;
+    min-height: 38px
+}
+
+.product-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 18px
+}
+
+.price {
+    font-size: 11px;
+    color: var(--yellow);
+    font-weight: 800
+}
+
+.customize-btn {
+    background: var(--yellow);
+    color: #111;
+    border: 0;
+    padding: 11px 13px;
+    font-size: 9px;
+    font-weight: 900;
+    cursor: pointer
+}
+
+.customize-btn:hover {
+    background: white
+}
+
+.menu-note {
+    color: #777;
+    font-size: 9px;
+    margin-top: 22px
+}
+
+.custom-banner {
+    background: var(--yellow);
+    color: #111;
+    padding: 36px max(28px, calc((100% - 1184px)/2));
+    display: flex;
+    align-items: center;
+    gap: 25px
+}
+
+.banner-icon {
+    width: 55px;
+    height: 55px;
+    border: 2px solid #111;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 35px;
+    flex-shrink: 0
+}
+
+.custom-banner>div:nth-child(2) {
+    flex: 1
+}
+
+.custom-banner span {
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 2px
+}
+
+.custom-banner h2 {
+    font: 900 34px "Barlow Condensed";
+    margin: 4px 0
+}
+
+.custom-banner p {
+    font-size: 10px;
+    font-weight: 600
+}
+
+.about-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 75px
+}
+
+.about-photo {
+    height: 390px;
+    position: relative
+}
+
+.about-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+.photo-tag {
+    position: absolute;
+    bottom: -18px;
+    right: -18px;
+    background: var(--yellow);
+    color: #111;
+    padding: 17px 24px;
+    font: 900 20px/1 "Barlow Condensed";
+    transform: rotate(4deg)
+}
+
+.photo-tag b {
+    font-size: 28px
+}
+
+.about-copy h2,
+.location-info h2 {
+    font-size: 61px
+}
+
+.about-copy p {
+    font-size: 12px;
+    color: #aaa;
+    line-height: 2;
+    margin-bottom: 14px;
+    max-width: 470px
+}
+
+.about-copy .btn {
+    margin-top: 15px
+}
+
+.location-section {
+    padding-top: 15px
+}
+
+.location-card {
+    background: #1b1b1b;
+    border: 1px solid #ffffff12;
+    min-height: 270px;
+    padding: 48px 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative
+}
+
+.location-info h2 {
+    font-size: 58px;
+    margin: 18px 0
+}
+
+.address {
+    color: #bbb;
+    font-size: 12px;
+    line-height: 2;
+    margin-bottom: 20px
+}
+
+.location-decoration {
+    width: 240px;
+    height: 190px;
+    border: 1px solid #ffffff16;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-12deg);
+    background: radial-gradient(circle, #ffb51b1c, transparent 70%)
+}
+
+.location-decoration span {
+    font-size: 38px
+}
+
+.location-decoration strong {
+    font: 900 29px "Barlow Condensed";
+    color: var(--yellow);
+    letter-spacing: 2px
+}
+
+.location-decoration small {
+    font-size: 8px;
+    letter-spacing: 2px;
+    color: #aaa;
+    margin-top: 5px
+}
+
+.instagram-strip {
+    background: #171717;
+    padding: 50px max(28px, calc((100% - 1184px)/2));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px
+}
+
+.instagram-strip h2 {
+    font-size: 42px;
+    margin: 12px 0 0
+}
+
+.instagram-link {
+    border: 1px solid var(--yellow);
+    color: var(--yellow);
+    padding: 15px 20px;
+    font-size: 11px;
+    font-weight: 800
+}
+
+.footer {
+    min-height: 105px;
+    max-width: 1240px;
+    margin: auto;
+    padding: 25px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px
+}
+
+.footer p {
+    font-size: 10px;
+    color: #777
+}
+
+.footer p span {
+    margin-left: 8px
+}
+
+.footer>a:last-child {
+    font-size: 10px;
+    color: var(--yellow);
+    font-weight: 800
+}
+
+.splash {
+    position: fixed;
+    inset: 0;
+    background: #101010;
+    z-index: 200;
+    display: grid;
+    place-items: center;
+    transition: opacity .65s, visibility .65s
+}
+
+.splash.hide {
+    opacity: 0;
+    visibility: hidden
+}
+
+.splash-content {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column
+}
+
+.splash-mark {
+    width: 78px;
+    height: 78px;
+    background: var(--yellow);
+    color: #111;
+    display: grid;
+    place-items: center;
+    font: 900 65px "Barlow Condensed";
+    transform: skew(-7deg);
+    animation: markPop .8s both
+}
+
+.splash-mark span {
+    color: white
+}
+
+.splash-name {
+    font: 900 24px "Barlow Condensed";
+    letter-spacing: 3px;
+    margin-top: 18px
+}
+
+.splash-name span {
+    color: var(--yellow)
+}
+
+.loader {
+    width: 170px;
+    height: 3px;
+    background: #333;
+    margin: 25px 0 13px;
+    overflow: hidden
+}
+
+.loader span {
+    height: 100%;
+    width: 40%;
+    display: block;
+    background: var(--yellow);
+    animation: loading 1.3s ease-in-out infinite
+}
+
+.splash small {
+    font-size: 8px;
+    letter-spacing: 2px;
+    color: #888
+}
+
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: #000c;
+    z-index: 100;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    backdrop-filter: blur(5px)
+}
+
+.modal-backdrop.open {
+    display: flex;
+    animation: fadeIn .2s
+}
+
+.modal {
+    position: relative;
+    background: #191919;
+    border: 1px solid #ffffff20;
+    width: min(760px, 100%);
+    max-height: 90vh;
+    overflow: auto;
+    box-shadow: 0 25px 90px #0009;
+    animation: modalIn .25s
+}
+
+.modal-close {
+    position: absolute;
+    z-index: 3;
+    top: 12px;
+    right: 14px;
+    width: 35px;
+    height: 35px;
+    border: 0;
+    border-radius: 50%;
+    background: #111;
+    color: white;
+    font-size: 25px;
+    cursor: pointer
+}
+
+.custom-modal {
+    display: grid;
+    grid-template-columns: .85fr 1.15fr
+}
+
+.modal-image {
+    min-height: 100%;
+    background: #252525
+}
+
+.modal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    inset: 0;
+    width: 38%;
+    height: 100%
+}
+
+.modal-body {
+    padding: 35px 30px
+}
+
+.modal-body h2,
+.cart-modal h2 {
+    font: 900 36px "Barlow Condensed";
+    margin: 12px 0
+}
+
+.modal-description {
+    color: #aaa;
+    font-size: 11px;
+    line-height: 1.7;
+    margin-bottom: 22px
+}
+
+.ingredient-heading {
+    border-top: 1px solid #ffffff18;
+    padding-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px
+}
+
+.ingredient-heading strong {
+    font-size: 12px
+}
+
+.ingredient-heading small {
+    font-size: 9px;
+    color: #888
+}
+
+.ingredient-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 17px 0 20px
+}
+
+.ingredient-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #222;
+    padding: 10px;
+    font-size: 10px;
+    color: #ddd;
+    cursor: pointer
+}
+
+.ingredient-option input {
+    accent-color: var(--yellow);
+    width: 15px;
+    height: 15px
+}
+
+.observation-label {
+    display: block;
+    font-size: 10px;
+    font-weight: 800;
+    margin-bottom: 8px
+}
+
+textarea {
+    width: 100%;
+    resize: vertical;
+    background: #222;
+    border: 1px solid #333;
+    color: white;
+    padding: 11px;
+    font: 10px Montserrat;
+    outline: none
+}
+
+textarea:focus {
+    border-color: var(--yellow)
+}
+
+.full-button {
+    width: 100%;
+    margin-top: 18px
+}
+
+.cart-modal {
+    width: min(540px, 100%);
+    padding: 35px
+}
+
+.cart-items {
+    max-height: 45vh;
+    overflow: auto;
+    margin-top: 20px
+}
+
+.empty-cart {
+    color: #999;
+    font-size: 12px;
+    text-align: center;
+    padding: 35px 10px;
+    background: #222
+}
+
+.cart-item {
+    padding: 15px 0;
+    border-bottom: 1px solid #ffffff18;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px
+}
+
+.cart-item strong {
+    font-size: 12px
+}
+
+.cart-item small {
+    display: block;
+    color: #999;
+    font-size: 9px;
+    line-height: 1.7;
+    margin-top: 5px
+}
+
+.remove-item {
+    background: none;
+    border: 0;
+    color: #ff7777;
+    font-size: 10px;
+    cursor: pointer
+}
+
+.cart-footer {
+    border-top: 1px solid #ffffff18;
+    margin-top: 15px;
+    padding-top: 15px
+}
+
+.cart-footer p {
+    font-size: 9px;
+    color: #888
+}
+
+.toast {
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    transform: translate(-50%, 20px);
+    background: var(--yellow);
+    color: #111;
+    padding: 13px 20px;
+    font-size: 11px;
+    font-weight: 900;
+    z-index: 150;
+    opacity: 0;
+    pointer-events: none;
+    transition: .25s
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translate(-50%, 0)
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity .7s, transform .7s
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0)
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(-2deg)
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(1deg)
+    }
+}
+
+@keyframes marquee {
+    to {
+        transform: translateX(-50%)
+    }
+}
+
+@keyframes loading {
+    0% {
+        transform: translateX(-110%)
+    }
+
+    100% {
+        transform: translateX(260%)
+    }
+}
+
+@keyframes markPop {
+    from {
+        opacity: 0;
+        transform: scale(.5) rotate(-15deg)
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) skew(-7deg)
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes modalIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px) scale(.98)
+    }
+
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
+
+@keyframes cardIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px)
+    }
+
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
+
+@media(max-width:850px) {
+    .navbar {
+        height: 72px
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+        margin-right: 15px
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: #151515;
+        padding: 22px 28px;
+        flex-direction: column;
+        gap: 22px;
+        border-bottom: 1px solid #ffffff20
+    }
+
+    .nav-links.show {
+        display: flex
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 60px;
+        gap: 15px
+    }
+
+    .hero-art {
+        height: 340px
+    }
+
+    .hero-circle {
+        width: 300px;
+        height: 300px
+    }
+
+    .hero-burger {
+        max-height: 340px
+    }
+
+    .hero h1 {
+        font-size: 75px
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .about-section {
+        gap: 40px
+    }
+
+    .about-copy h2 {
+        font-size: 48px
+    }
+
+    .custom-banner {
+        flex-wrap: wrap
+    }
+
+    .custom-banner>div:nth-child(2) {
+        min-width: 65%
+    }
+}
+
+@media(max-width:600px) {
+    .topline {
+        font-size: 8px
+    }
+
+    .navbar {
+        padding: 0 17px
+    }
+
+    .brand-icon {
+        width: 37px;
+        height: 37px;
+        font-size: 29px
+    }
+
+    .brand-name {
+        font-size: 16px
+    }
+
+    .cart-button {
+        padding: 8px 10px;
+        font-size: 9px
+    }
+
+    .hero {
+        padding: 55px 20px 60px
+    }
+
+    .hero h1 {
+        font-size: 65px
+    }
+
+    .hero-copy>p {
+        font-size: 12px
+    }
+
+    .hero-art {
+        height: 285px
+    }
+
+    .hero-circle {
+        width: 245px;
+        height: 245px
+    }
+
+    .hero-burger {
+        max-height: 285px
+    }
+
+    .hero-stamp {
+        left: 2px;
+        top: 10px;
+        font-size: 12px
+    }
+
+    .hero-caption {
+        right: 0;
+        bottom: 0
+    }
+
+    .section {
+        padding: 75px 19px
+    }
+
+    .section-heading {
+        display: block
+    }
+
+    .section-heading h2 {
+        font-size: 52px
+    }
+
+    .section-heading>p {
+        margin-top: 15px
+    }
+
+    .filters {
+        gap: 7px
+    }
+
+    .filter {
+        font-size: 9px;
+        padding: 10px 12px
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 15px
+    }
+
+    .product-photo {
+        height: 230px
+    }
+
+    .custom-banner {
+        padding: 30px 20px;
+        gap: 15px
+    }
+
+    .custom-banner h2 {
+        font-size: 29px
+    }
+
+    .custom-banner p {
+        line-height: 1.7
+    }
+
+    .custom-banner .btn {
+        width: 100%
+    }
+
+    .about-section {
+        grid-template-columns: 1fr;
+        gap: 45px
+    }
+
+    .about-photo {
+        height: 280px;
+        margin-right: 12px
+    }
+
+    .about-copy h2 {
+        font-size: 50px
+    }
+
+    .location-card {
+        padding: 32px 24px;
+        min-height: 0
+    }
+
+    .location-info h2 {
+        font-size: 48px
+    }
+
+    .location-decoration {
+        width: 110px;
+        height: 110px;
+        position: absolute;
+        right: -25px;
+        bottom: 15px;
+        opacity: .45
+    }
+
+    .location-decoration span {
+        font-size: 22px
+    }
+
+    .location-decoration strong {
+        font-size: 18px
+    }
+
+    .location-decoration small {
+        font-size: 6px
+    }
+
+    .instagram-strip {
+        padding: 38px 20px;
+        display: block
+    }
+
+    .instagram-strip h2 {
+        font-size: 37px
+    }
+
+    .instagram-link {
+        display: inline-block;
+        margin-top: 22px
+    }
+
+    .footer {
+        padding: 25px 20px;
+        flex-wrap: wrap
+    }
+
+    .footer p {
+        order: 3;
+        width: 100%
+    }
+
+    .custom-modal {
+        display: block;
+        width: min(480px, 100%)
+    }
+
+    .modal-image {
+        height: 150px;
+        min-height: 0
+    }
+
+    .modal-image img {
+        position: relative;
+        width: 100%;
+        height: 150px
+    }
+
+    .modal-body {
+        padding: 25px 20px
+    }
+
+    .ingredient-list {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .cart-modal {
+        padding: 28px 20px
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important
+    }
+}

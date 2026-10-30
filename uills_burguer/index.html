@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111111">
+  <title>Uills Burguer | Amparo - SP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- TELA DE ABERTURA -->
+  <div class="splash" id="splash">
+    <div class="splash-content">
+      <div class="splash-mark">U<span>.</span></div>
+      <p class="splash-name">UILLS <span>BURGUER</span></p>
+      <div class="loader"><span></span></div>
+      <small>PREPARANDO ALGO DELICIOSO...</small>
+    </div>
+  </div>
+
+  <div class="page" id="page">
+    <div class="topline">🍔 O SEU PRÓXIMO HAMBÚRGUER FAVORITO ESTÁ AQUI!</div>
+
+    <header class="header">
+      <nav class="navbar">
+        <a href="#inicio" class="brand" aria-label="Uills Burguer - início">
+          <span class="brand-icon">U<span>.</span></span>
+          <span class="brand-name">UILLS<small>BURGUER</small></span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+
+        <div class="nav-links" id="navLinks">
+          <a href="#inicio">Início</a>
+          <a href="#cardapio">Cardápio</a>
+          <a href="#sobre">A Uills</a>
+          <a href="#localizacao">Localização</a>
+        </div>
+
+        <button class="cart-button" id="openCart">
+          <span>Meu pedido</span>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="hero-copy reveal">
+          <span class="eyebrow"><i></i> FEITO PRA MATAR SUA FOME</span>
+          <h1>RESPEITA<br>O <span>HAMBÚRGUER.</span></h1>
+          <p>O sabor que transforma qualquer fome em vontade de repetir. Escolha seu lanche, personalize do seu jeito e aproveite!</p>
+          <div class="hero-actions">
+            <a href="#cardapio" class="btn btn-yellow">ESCOLHER MEU LANCHE <b>↗</b></a>
+            <a href="#sobre" class="text-link">Conheça a Uills <span>→</span></a>
+          </div>
+          <div class="hero-note"><span>📍</span> Amparo – SP</div>
+        </div>
+
+        <div class="hero-art reveal">
+          <div class="hero-stamp">SABOR<br><b>DE VERDADE</b></div>
+          <div class="hero-circle"></div>
+          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1100&auto=format&fit=crop&q=85" alt="Hambúrguer artesanal com queijo e salada" class="hero-burger">
+          <div class="hero-caption"><span>UAU!</span><small>PREPARE-SE PARA<br>ESSA EXPERIÊNCIA.</small></div>
+        </div>
+      </section>
+
+      <section class="ticker" aria-label="Destaques">
+        <div>🔥 SABOR QUE MARCA <b>✦</b> DO SEU JEITO <b>✦</b> HAMBÚRGUER DE RESPEITO <b>✦</b> AMPARO - SP <b>✦</b> SABOR QUE MARCA <b>✦</b> DO SEU JEITO <b>✦</b></div>
+      </section>
+
+      <section class="menu-section section" id="cardapio">
+        <div class="section-heading reveal">
+          <div>
+            <span class="eyebrow"><i></i> ESCOLHA O SEU FAVORITO</span>
+            <h2>PARTIU <span>MATAR A FOME?</span></h2>
+          </div>
+          <p>Explore o cardápio e monte seu lanche<br>exatamente como você gosta.</p>
+        </div>
+
+        <div class="filters reveal" id="filters">
+          <button class="filter active" data-filter="todos">Tudo</button>
+          <button class="filter" data-filter="hamburguer">Hambúrgueres</button>
+          <button class="filter" data-filter="acompanhamento">Acompanhamentos</button>
+          <button class="filter" data-filter="bebida">Bebidas</button>
+        </div>
+
+        <div class="product-grid" id="productGrid"></div>
+        <p class="menu-note">* Produtos, ingredientes e valores ilustrativos. Cardápio oficial em atualização.</p>
+      </section>
+
+      <section class="custom-banner">
+        <div class="banner-icon">＋</div>
+        <div>
+          <span>VOCÊ NO COMANDO</span>
+          <h2>SEU LANCHE. SUAS REGRAS.</h2>
+          <p>Sem cebola? Mais queijo? Personalize os ingredientes na hora de escolher.</p>
+        </div>
+        <a href="#cardapio" class="btn btn-dark">MONTAR MEU LANCHE ↗</a>
+      </section>
+
+      <section class="about-section section" id="sobre">
+        <div class="about-photo reveal">
+          <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=1000&auto=format&fit=crop&q=85" alt="Hambúrguer suculento servido em uma mesa">
+          <div class="photo-tag">UILLS<br><b>BURGUER</b></div>
+        </div>
+        <div class="about-copy reveal">
+          <span class="eyebrow"><i></i> PRAZER, SOMOS A UILLS</span>
+          <h2>UMA BOA FOME<br>MERECE UM <span>BOM LANCHE.</span></h2>
+          <p>A Uills Burguer está em Amparo para deixar seus momentos ainda mais saborosos. Escolha seu lanche, personalize do seu jeito e venha conhecer!</p>
+          <a class="btn btn-yellow" href="https://www.instagram.com/uilliam_lanches_/" target="_blank" rel="noopener">SIGA NO INSTAGRAM ↗</a>
+        </div>
+      </section>
+
+      <section class="location-section section" id="localizacao">
+        <div class="location-card reveal">
+          <div class="location-info">
+            <span class="eyebrow"><i></i> ESTAMOS EM AMPARO</span>
+            <h2>VEM PRA <span>UILLS!</span></h2>
+            <p class="address">📍 Rua Lupercio Lopes Da Silva<br>Amparo – São Paulo</p>
+            <a class="btn btn-yellow" href="https://www.google.com/maps/search/?api=1&query=Rua+Lupercio+Lopes+Da+Silva%2C+Amparo%2C+SP" target="_blank" rel="noopener">VER NO MAPA ↗</a>
+          </div>
+          <div class="location-decoration"><span>📍</span><strong>AMPARO</strong><small>SÃO PAULO · BRASIL</small></div>
+        </div>
+      </section>
+
+      <section class="instagram-strip">
+        <div>
+          <span class="eyebrow">ACOMPANHE AS NOVIDADES</span>
+          <h2>SEGUE A GENTE <span>NO INSTA!</span></h2>
+        </div>
+        <a href="https://www.instagram.com/uilliam_lanches_/" target="_blank" rel="noopener" class="instagram-link">@uilliam_lanches_ ↗</a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a href="#inicio" class="brand">
+        <span class="brand-icon">U<span>.</span></span>
+        <span class="brand-name">UILLS<small>BURGUER</small></span>
+      </a>
+      <p>O sabor que conquista. <span>© 2026 Uills Burguer.</span></p>
+      <a href="https://www.instagram.com/uilliam_lanches_/" target="_blank" rel="noopener"></a>
+    </footer>
+  </div>
+
+  <!-- MODAL PARA PERSONALIZAR LANCHE -->
+  <div class="modal-backdrop" id="customModal" aria-hidden="true">
+    <div class="modal custom-modal" role="dialog" aria-modal="true" aria-labelledby="customTitle">
+      <button class="modal-close" data-close="customModal" aria-label="Fechar">×</button>
+      <div class="modal-image"><img id="customImage" src="" alt=""></div>
+      <div class="modal-body">
+        <span class="eyebrow"><i></i> DO SEU JEITO</span>
+        <h2 id="customTitle">Personalize seu lanche</h2>
+        <p id="customDescription" class="modal-description"></p>
+        <div class="ingredient-heading">
+          <strong>Monte do seu jeito</strong>
+          <small>Marque para adicionar ou desmarque para retirar.</small>
+        </div>
+        <div id="ingredientList" class="ingredient-list"></div>
+        <label class="observation-label" for="orderObservation">Alguma observação?</label>
+        <textarea id="orderObservation" placeholder="Ex.: cortar ao meio, molho à parte..." rows="2"></textarea>
+        <button class="btn btn-yellow full-button" id="addToCart">ADICIONAR AO PEDIDO <span>＋</span></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CARRINHO -->
+  <div class="modal-backdrop" id="cartModal" aria-hidden="true">
+    <div class="modal cart-modal" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+      <button class="modal-close" data-close="cartModal" aria-label="Fechar">×</button>
+      <span class="eyebrow"><i></i> SEU PEDIDO</span>
+      <h2 id="cartTitle">SEU CARRINHO</h2>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="cart-footer">
+        <p>Os valores serão confirmados pela lanchonete.</p>
+        <button class="btn btn-yellow full-button" id="checkoutButton">FINALIZAR PELO WHATSAPP ↗</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+</body>
+</html>
