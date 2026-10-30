@@ -1,16 +1,16 @@
-# 🍔 Uills Burguer
+# Uills Burguer
 
 Site desenvolvido para a lanchonete **Uills Burguer**, localizada em Amparo - SP.
 
 O projeto apresenta os produtos da lanchonete, permite personalizar os lanches, adicionar itens ao carrinho e realizar pedidos pelo WhatsApp.
 
-## 🚀 Tecnologias utilizadas
+## Tecnologias utilizadas
 
 - HTML5
 - CSS3
 - JavaScript
 
-## 📌 Funcionalidades
+## Funcionalidades
 
 - Página inicial com apresentação da lanchonete.
 - Cardápio com categorias de produtos.
@@ -21,7 +21,7 @@ O projeto apresenta os produtos da lanchonete, permite personalizar os lanches, 
 - Layout responsivo para celulares e computadores.
 - Animações e efeitos visuais.
 
-## 📂 Estrutura do projeto
+## Estrutura do projeto
 
 ```text
 uills_burguer/
@@ -31,7 +31,7 @@ uills_burguer/
 └── script.js
 ```
 
-## 📍 Localização
+## Localização
 
 **Uills Burguer**
 
